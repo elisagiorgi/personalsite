@@ -1,30 +1,45 @@
 <script>
-	export let name;
+  import Typewriter from "svelte-typewriter";
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+<div class="parallax" />
+
+<div class="container">
+  <Typewriter loop>
+    <h1>Elisa Giorgi</h1>
+    <p>Software developer</p>
+  </Typewriter>
+</div>
+
+<div class="parallax" />
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
+  .container {
+    height: 1000px;
+    color: white;
+    background-color: black;
+    font-size: 50px;
+    padding-top: 50px;
+    text-align: center;
+  }
+  .parallax {
+    /* The image used */
+    background-image: url("../images/mountains.jpg");
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
+    /* Full height */
+    height: 100%;
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
 </style>
