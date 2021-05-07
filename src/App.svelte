@@ -1,7 +1,15 @@
+
 <script>
+	import Navbar from './components/Navbar.svelte'
+	import Sidebar from './components/Sidebar.svelte'
+
+	let open = false
 </script>
 
+
 <div class="parallax">
+  <Sidebar bind:open/>
+  <Navbar bind:sidebar={open}/>
   <div class="animated-title">
     <div class="text-top">
       <div>
@@ -85,6 +93,7 @@
     transform: translate(-50%, -50%);
     width: 90vw;
     font-size: 6vmin;
+    margin-top: 121px;
   }
   .animated-title > div {
     height: 50%;
