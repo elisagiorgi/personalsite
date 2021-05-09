@@ -96,8 +96,18 @@
     transform: translate(-50%, -50%);
     width: 90vw;
     font-size: 6vmin;
-    margin-top: 121px;
+    margin-top: 40px;
   }
+ 
+
+@media  only screen and  (max-width: 480px) {
+   .animated-title {
+    margin-top: 10px;
+    top: 40vh;
+    color: #ffffff;
+  }
+  }
+   
   .animated-title > div {
     height: 50%;
     overflow: hidden;

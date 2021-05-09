@@ -64,7 +64,7 @@
     }
 
   nav {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.94);
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     height: 45px;
   }
@@ -80,6 +80,8 @@
     height: 100%;
     justify-content: flex-end;
     color: white;
+        z-index: 1;
+    position: relative;
   }
 
   .mobile-icon {
@@ -150,7 +152,7 @@
   }
 
   .navbar-list.mobile {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.94);
     position: fixed;
     display: block;
     height: calc(100% - 45px);
