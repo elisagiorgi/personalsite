@@ -1,16 +1,18 @@
 
 <script>
-	import Navbar from './components/Navbar.svelte'
-	import Sidebar from './components/Sidebar.svelte'
-
+    import  Navbar from "./components/Navbar.svelte";
+      import  Nav2 from "./components/Nav2.svelte";
+ 
 	let open = false
 </script>
 
 
 <div class="parallax">
-  <Sidebar bind:open/>
-  <Navbar bind:sidebar={open}/>
+  <!-- <Navbar/> -->
+  <Nav2/>
+
   <div class="animated-title">
+    
     <div class="text-top">
       <div>
         <span> It’s fine to celebrate success</span>
@@ -27,6 +29,7 @@
 <div class="container" />
 
 <div class="parallax image2" />
+<div class="container" />
 
 <style>
   .container {

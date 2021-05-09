@@ -1,18 +1,43 @@
 <script>
-	import Hamburger from './Hamburger.svelte'
-	import Menu from './Menu.svelte'
 	
-	export let sidebar = false
+	export let menu = 1;
 </script>
 
-<svelte:head>
-	<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/>
-</svelte:head>
+<style>
+    #menu{
+         display: flex;
+        justify-content: flex-end;
+        color: white;
+         background: rgba(0, 0, 0, .2);
+    }
+	ul#menu li{
+		display : inline;
+        margin: 0 10px;
+       
+       
+	}
 
-<header class="flex justify-between bg-transparent-200 p-2 items-center text-gray-600 border-b-2">
-	<nav class="flex">
-		<Hamburger bind:open={sidebar}/>
-	</nav>
-	
-	<Menu/>
-</header>
+    .voice{
+        color:white;
+    }
+    .voice:hover{
+        opacity: 0.4
+    }
+</style>
+
+<ul id="menu">
+	<li><a class="voice" href="/" on:click|preventDefault={() => (menu = 1)}>Home</a></li> |
+	<li><a class="voice" href="/" on:click|preventDefault={() => (menu = 2)}>About</a></li> |
+    	<li><a class="voice" href="/" on:click|preventDefault={() => (menu = 2)}>Skills</a></li>
+</ul>
+
+{#if menu === 1}
+<!-- <Beranda /> --> Ciaooo
+{:else if menu === 2}
+<!-- <Profile /> --> ciao
+{:else}
+<h1>
+	Page Not Found
+</h1>
+{/if}
+
